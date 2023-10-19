@@ -1,0 +1,65 @@
+body{
+    height: 100vh;
+
+}
+
+header{
+    height: 4rem;
+   
+}
+
+.logo{
+    width: 2.3rem;
+}
+
+.questionmark{
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.cross{
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+    text-align: center;
+    color: white;
+    border: solid 1px white;
+    border-radius: 5px;
+    
+
+}
+
+.tableicon{
+    width: 1.7rem;
+    height: 1.7rem;
+    display: inline-block;
+    text-align: center;
+    border: solid 1px #8b9298;
+    border-radius: 5px;
+
+}
+
+.code{
+    background-color: #f26551;
+}
+
+
+.sidebar{
+    height: calc(100% - 4rem);
+    max-width: 10rem;
+    background-color: #142A40;
+    background-image: url("../img/sidebar-bg.png");
+    background-size: cover;
+}
+
+.cardsection{
+    height: calc(100% - 4rem);
+    width: 100%;
+}
+
+/* ul{
+    list-style: none;
+} */

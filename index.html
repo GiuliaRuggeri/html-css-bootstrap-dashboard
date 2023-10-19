@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dashboard</title>
+</head>
+
+<body class="w-100">
+    <header>
+        <nav class="navbar bg-light navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid bg-white flex-nowrap">
+                <a class="navbar-brand" href="#">
+                    <img class="img-fluid logo d-block d-sm-block d-md-none" src="img/mobile-logo.png"
+                        alt="mobile logo">
+                    <img class="img-fluid d-none d-sm-none d-md-block" src="img/logo.svg" alt="big logo">
+                </a>
+                <form class="d-flex w-100 position-relative align-items-center" role="search">
+                    <input class="form-control bg-light" type="search" placeholder="Prova a cercare"
+                        aria-label="Search">
+                    <!-- <i class="fa-solid fa-magnifying-glass fa-2xs position-absolute me-5" style="color: #000000;"></i> -->
+                </form>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item me-2">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <i class="fa-solid fa-bars fa-lg" style="color: #000000;"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a class="nav-link questionmark" href="#">
+                                <div>
+                                    <i class="fa-solid fa-question fa-lg" style="color: #ffffff;"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fa-solid fa-ellipsis-vertical fa-lg" style="color: #000000;"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <span><i class="fa-solid fa-bell fa-lg ms-2" style="color: #ff8f00;"></i></span>
+            </div>
+        </nav>
+    </header>
+    <!-- MAIN -->
+    <main class="d-flex h-100 overflow-hidden">
+        <div class="sidebar d-flex flex-column justify-content-between">
+            <div class="wrapper">
+                <div class="container">
+                    <ul class="list-unstyled mt-3">
+                        <a href="#" class="text-decoration-none">
+                            <li class="d-flex align-items-center justify-content-center mb-5 ">
+                                <i class="fa-solid fa-house fa-lg me-2" style="color: #ffffff;"></i>
+                                <div class="text-white d-none d-sm-none d-md-block">Home</div>
+                            </li>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <li class="d-flex align-items-center justify-content-center mb-5">
+                                <i class="fa-solid fa-chart-simple fa-lg me-2" style="color: #ffffff;"></i>
+                                <div class="text-white d-none d-sm-none d-md-block">Stats</div>
+                            </li>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <li class="d-flex align-items-center justify-content-center mb-5">
+                                <i class="fa-solid fa-signal fa-lg me-2" style="color: #ffffff;"></i>
+                                <div class="text-white d-none d-sm-none d-md-block">Signals</div>
+                            </li>
+                        </a>
+                    </ul>
+
+
+                </div>
+            </div>
+            <div class="text-white p-2">
+                <i class="fa-solid fa-gear fa-lg" style="color: #ffffff;"></i>
+                <span class="d-none d-sm-none d-md-block">Admin</span>
+            </div>
+
+        </div>
+        <div class="cardsection overflow-auto">
+            <div class="container-fluid">
+                <div class="row bg-primary">
+                    <div class="col-12 col-sm-4 col-md-4">
+                        <span class="text-white h1 mt-2">Boolean</span>
+                        <span class="badge rounded-pill text-bg-light">Piano blaze</span>
+                        <div class="mb-1">
+                            <span class="badge rounded-pill text-bg-light">3 app</span>
+                            <i class="fa-solid fa-angles-right fa-2xs" style="color: #ffffff;"></i>
+                            <span class="badge rounded-pill text-bg-light">+</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-4">
+                        <p class="h4 text-white mt-2">Studenti online negli ultimi 30 min</p>
+                        <p class="h3 text-white">125</p>
+
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-4 text-md-center">
+                        <span class="text-white h6 mt-2 mb-2">Nuovo studente</span>
+                        <span class="cross ms-2 mt-2 mb-2">+</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- TABLE -->
+            <div class="wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-9">
+                            <div class="card mt-4">
+                                <div class="card-header">
+                                    <h1>Prossime classi</h1>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th class="w-25" scope="col">Nome</th>
+                                                <th class="d-none d-sm-table-cell d-md-table-cell" scope="col">Data
+                                                    inizio</th>
+                                                <th class="d-none d-sm-table-cell d-md-table-cell" scope="col">ROI</th>
+                                                <th scope="col">Stato</thclass=>
+                                                <th scope="col">Azioni</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">
+                                                    <span class="badge rounded-pill code">
+                                                        <i class="fa-solid fa-code fa-2xs" style="color: #ffffff;"></i>
+                                                    </span>
+                                                    Classe 75
+                                                </th>
+                                                <td class="d-none d-sm-table-cell d-md-table-cell">15 febbraio 2021</td>
+                                                <td class="d-none d-sm-block d-md-block">20%</td>
+                                                <td><span class="badge rounded-pill text-bg-success">Done</span></td>
+                                                <td>
+                                                    <span class="tableicon"><i class="fa-solid fa-pencil fa-xs"
+                                                            style="color: #8b9298;"></i></span>
+                                                    <span class="tableicon"><i class="fa-solid fa-trash fa-xs"
+                                                            style="color: #8b9298;"></i></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    <span class="badge rounded-pill code">
+                                                        <i class="fa-solid fa-code fa-2xs" style="color: #ffffff;"></i>
+                                                    </span>
+                                                    Classe 76
+                                                </th>
+                                                </th>
+                                                <td class="d-none d-sm-table-cell d-md-table-cell">16 febbraio 2021</td>
+                                                <td class="d-none d-sm-table-cell d-md-table-cell">20%</td>
+                                                <td><span class="badge rounded-pill text-bg-success">Done</span></td>
+                                                <td>
+                                                    <span class="tableicon"><i class="fa-solid fa-pencil fa-xs"
+                                                            style="color: #8b9298;"></i></span>
+                                                    <span class="tableicon"><i class="fa-solid fa-trash fa-xs"
+                                                            style="color: #8b9298;"></i></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    <span class="badge rounded-pill code">
+                                                        <i class="fa-solid fa-code fa-2xs" style="color: #ffffff;"></i>
+                                                    </span>
+                                                    Classe 77
+                                                </th>
+                                                <td class="d-none d-sm-table-cell d-md-table-cell">17 febbraio 2021</td>
+                                                <td class="d-none d-sm-table-cell d-md-table-cell">20%</td>
+                                                <td><span
+                                                        class="badge rounded-pill text-bg-warning text-white">Process</span>
+                                                </td>
+                                                <td>
+                                                    <span class="tableicon"><i class="fa-solid fa-pencil fa-xs"
+                                                            style="color: #8b9298;"></i></span>
+                                                    <span class="tableicon"><i class="fa-solid fa-trash fa-xs"
+                                                            style="color: #8b9298;"></i></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    <span class="badge rounded-pill code">
+                                                        <i class="fa-solid fa-code fa-2xs" style="color: #ffffff;"></i>
+                                                    </span>
+                                                    Classe 78
+                                                </th>
+                                                <td class="d-none d-sm-table-cell d-md-table-cell">17 febbraio 2021</td>
+                                                <td class="d-none d-sm-table-cell d-md-table-cell">20%</td>
+                                                <td><span class="badge rounded-pill text-bg-success">Done</span></td>
+                                                <td>
+                                                    <span class="tableicon"><i class="fa-solid fa-pencil fa-xs"
+                                                            style="color: #8b9298;"></i></span>
+                                                    <span class="tableicon"><i class="fa-solid fa-trash fa-xs"
+                                                            style="color: #8b9298;"></i></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    <span class="badge rounded-pill code">
+                                                        <i class="fa-solid fa-code fa-2xs" style="color: #ffffff;"></i>
+                                                    </span>
+                                                    Classe 79
+                                                </th>
+                                                <td class="d-none d-sm-table-cell d-md-table-cell">17 febbraio 2021</td>
+                                                <td class="d-none d-sm-table-cell d-md-table-cell">20%</td>
+                                                <td><span class="badge rounded-pill text-bg-danger">Failed</span></td>
+                                                <td>
+                                                    <span class="tableicon"><i class="fa-solid fa-pencil fa-xs"
+                                                            style="color: #8b9298;"></i></span>
+                                                    <span class="tableicon"><i class="fa-solid fa-trash fa-xs"
+                                                            style="color: #8b9298;"></i></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    <span class="badge rounded-pill code">
+                                                        <i class="fa-solid fa-code fa-2xs" style="color: #ffffff;"></i>
+                                                    </span>
+                                                    Classe 80
+                                                </th>
+                                                <td class="d-none d-sm-table-cell d-md-table-cell">17 febbraio 2021</td>
+                                                <td class="d-none d-sm-table-cell d-md-table-cell">20%</td>
+                                                <td><span class="badge rounded-pill text-bg-success">Done</span></td>
+                                                <td>
+                                                    <span class="tableicon"><i class="fa-solid fa-pencil fa-xs"
+                                                            style="color: #8b9298;"></i></span>
+                                                    <span class="tableicon"><i class="fa-solid fa-trash fa-xs"
+                                                            style="color: #8b9298;"></i></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    <span class="badge rounded-pill code">
+                                                        <i class="fa-solid fa-code fa-2xs" style="color: #ffffff;"></i>
+                                                    </span>
+                                                    Classe 81
+                                                </th>
+                                                <td class="d-none d-sm-table-cell d-md-table-cell">17 febbraio 2021</td>
+                                                <td class="d-none d-sm-table-cell d-md-table-cell">20%</td>
+                                                <td><span class="badge rounded-pill text-bg-danger">Failed</span></td>
+                                                <td>
+                                                    <span class="tableicon"><i class="fa-solid fa-pencil fa-xs"
+                                                            style="color: #8b9298;"></i></span>
+                                                    <span class="tableicon"><i class="fa-solid fa-trash fa-xs"
+                                                            style="color: #8b9298;"></i></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    <span class="badge rounded-pill code">
+                                                        <i class="fa-solid fa-code fa-2xs" style="color: #ffffff;"></i>
+                                                    </span>
+                                                    Classe 82
+                                                </th>
+                                                <td class="d-none d-sm-table-cell d-md-table-cell">17 febbraio 2021</td>
+                                                <td class="d-none d-sm-table-cell d-md-table-cell">20%</td>
+                                                <td><span class="badge rounded-pill text-bg-success">Done</span></td>
+                                                <td>
+                                                    <span class="tableicon"><i class="fa-solid fa-pencil fa-xs"
+                                                            style="color: #8b9298;"></i></span>
+                                                    <span class="tableicon"><i class="fa-solid fa-trash fa-xs"
+                                                            style="color: #8b9298;"></i></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- FAQ -->
+
+
+                            <div class="card mt-3">
+                                <div class="card-header">
+                                    <h3>F.A.Q</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed border-bottom" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                                    aria-expanded="false" aria-controls="flush-collapseOne">
+                                                    Come aggiungere un nuovo studente?
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                                data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">Placeholder content for this accordion,
+                                                    which is intended to demonstrate the <code>.accordion-flush</code>
+                                                    class. This is the first item's accordion body.</div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                                    aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                    Come posso accedere alle informazioni del mio account?
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                                data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">Placeholder content for this accordion,
+                                                    which is intended to demonstrate the <code>.accordion-flush</code>
+                                                    class. This is the second item's accordion body. Let's imagine this
+                                                    being filled with some actual content.</div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                                    aria-expanded="false" aria-controls="flush-collapseThree">
+                                                    Posso usare questa dashboard da mobile?
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                                data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">Placeholder content for this accordion,
+                                                    which is intended to demonstrate the <code>.accordion-flush</code>
+                                                    class. This is the third item's accordion body. Nothing more
+                                                    exciting happening here in terms of content, but just filling up the
+                                                    space to make it look, at least at first glance, a bit more
+                                                    representative of how this would look in a real-world application.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- TO DO -->
+                        <div class="col-12 col-sm-12 col-md-3">
+
+                            <div class="card mt-3 mb-3">
+                                <div class="card-header">
+                                    To Do
+                                </div>
+
+                                <div class="card-body">
+                                    <div class="card p-1">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                Kickoff nuove classi
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="card p-1">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                Lezioni su Bootstrap 5 in classe #75
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="card p-1">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                Controllare username Github studenti
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- LAST CARD -->
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="card p-1">
+                                        <img class="img-fluid" src="img/stats.jpeg" alt="stat">
+                                        <h4>Utenti attivi</h4>
+                                        <p>Lista degli utenti attivi in piattaforma nell'ultimo mese</p>
+                                    </div>
+                                    <div class="card">
+                                        Gennaio: 1200
+                                    </div>
+                                    <div class="card">
+                                        Febbraio 800
+                                    </div>
+                                    <div class="card">
+                                        Marzo: 1500
+                                    </div>
+                                    <div class="card">
+                                        <a href="#">
+                                            Visualizza report approfondito
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        </div>
+
+    </main>
+</body>
+
+</html>
