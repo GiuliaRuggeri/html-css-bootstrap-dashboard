@@ -8,16 +8,21 @@ header{
    
 }
 
+main{
+    height: calc(100% - 4rem);
+}
+
 .logo{
     width: 2.3rem;
 }
 
 .questionmark{
-    width: 2rem;
-    height: 2rem;
+    width: 1.8rem;
+    height: 1.8rem;
     text-align: center;
     border-radius: 50%;
-    background-color: black;
+    background-color: #5B5858;
+    line-height: 0.9rem;
 }
 
 .cross{
@@ -48,7 +53,7 @@ header{
 
 
 .sidebar{
-    height: calc(100% - 4rem);
+    height: 100%;
     max-width: 10rem;
     background-color: #142A40;
     background-image: url("../img/sidebar-bg.png");
@@ -63,3 +68,8 @@ header{
 /* ul{
     list-style: none;
 } */
+
+.sidebutton:hover{
+    background-color: rgba(255, 255, 255, 0.558);
+    
+}

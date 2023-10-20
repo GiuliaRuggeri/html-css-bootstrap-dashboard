@@ -8,6 +8,7 @@
         rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Dashboard</title>
 </head>
@@ -28,16 +29,18 @@
                 </form>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
+
                         <li class="nav-item me-2">
+
                             <a class="nav-link active" aria-current="page" href="#">
                                 <i class="fa-solid fa-bars fa-lg" style="color: #000000;"></i>
                             </a>
                         </li>
-                        <li class="nav-item me-2">
+                        <li class="nav-item me-2 align-self-center">
                             <a class="nav-link questionmark" href="#">
-                                <div>
-                                    <i class="fa-solid fa-question fa-lg" style="color: #ffffff;"></i>
-                                </div>
+
+                                <i class="fa-solid fa-question fa-lg" style="color: #ffffff;"></i>
+
                             </a>
                         </li>
                         <li class="nav-item">
@@ -47,7 +50,18 @@
                         </li>
                     </ul>
                 </div>
-                <span><i class="fa-solid fa-bell fa-lg ms-2" style="color: #ff8f00;"></i></span>
+                <div class="btn-group dropdown">
+                    <button class="btn btn-link text-warning" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-bell fa-lg ms-2" style="color: #ff8f00;"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Profilo</a></li>
+                        <li><a class="dropdown-item" href="#">Fatturazione</a></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
             </div>
         </nav>
     </header>
@@ -57,31 +71,38 @@
             <div class="wrapper">
                 <div class="container">
                     <ul class="list-unstyled mt-3">
-                        <a href="#" class="text-decoration-none">
-                            <li class="d-flex align-items-center justify-content-center mb-5 ">
-                                <i class="fa-solid fa-house fa-lg me-2" style="color: #ffffff;"></i>
-                                <div class="text-white d-none d-sm-none d-md-block">Home</div>
-                            </li>
-                        </a>
-                        <a href="#" class="text-decoration-none">
-                            <li class="d-flex align-items-center justify-content-center mb-5">
-                                <i class="fa-solid fa-chart-simple fa-lg me-2" style="color: #ffffff;"></i>
-                                <div class="text-white d-none d-sm-none d-md-block">Stats</div>
-                            </li>
-                        </a>
-                        <a href="#" class="text-decoration-none">
-                            <li class="d-flex align-items-center justify-content-center mb-5">
-                                <i class="fa-solid fa-signal fa-lg me-2" style="color: #ffffff;"></i>
-                                <div class="text-white d-none d-sm-none d-md-block">Signals</div>
-                            </li>
-                        </a>
+                        <div class="sidebutton">
+                            <a href="#" class="text-decoration-none">
+                                <li class="d-flex align-items-center justify-content-center mb-5 ">
+                                    <i class="fa-solid fa-house fa-lg me-2" style="color: #ffffff;"></i>
+                                    <div class="text-white d-none d-sm-none d-md-block">Home</div>
+                                </li>
+                            </a>
+                        </div>
+                        <div class="sidebutton">
+                            <a href="#" class="text-decoration-none">
+                                <li class="d-flex align-items-center justify-content-center mb-5">
+                                    <i class="fa-solid fa-chart-simple fa-lg me-2" style="color: #ffffff;"></i>
+                                    <div class="text-white d-none d-sm-none d-md-block">Stats</div>
+                                </li>
+                            </a>
+                        </div>
+                        <div class="sidebutton">
+                            <a href="#" class="text-decoration-none">
+                                <li class="d-flex align-items-center justify-content-center mb-5">
+                                    <i class="fa-solid fa-signal fa-lg me-2" style="color: #ffffff;"></i>
+                                    <div class="text-white d-none d-sm-none d-md-block">Signals</div>
+                                </li>
+                            </a>
+                        </div>
+
                     </ul>
 
 
                 </div>
             </div>
-            <div class="text-white p-2">
-                <i class="fa-solid fa-gear fa-lg" style="color: #ffffff;"></i>
+            <div class="text-white p-2 d-flex justify-content-center align-items-center">
+                <i class="fa-solid fa-gear fa-lg me-2" style="color: #ffffff;"></i>
                 <span class="d-none d-sm-none d-md-block">Admin</span>
             </div>
 
@@ -91,7 +112,7 @@
                 <div class="row bg-primary">
                     <div class="col-12 col-sm-4 col-md-4">
                         <span class="text-white h1 mt-2">Boolean</span>
-                        <span class="badge rounded-pill text-bg-light">Piano blaze</span>
+                        <span class="badge rounded-pill text-bg-light ms-2">Piano blaze</span>
                         <div class="mb-1">
                             <span class="badge rounded-pill text-bg-light">3 app</span>
                             <i class="fa-solid fa-angles-right fa-2xs" style="color: #ffffff;"></i>
@@ -105,7 +126,94 @@
                     </div>
                     <div class="col-12 col-sm-4 col-md-4 text-md-center">
                         <span class="text-white h6 mt-2 mb-2">Nuovo studente</span>
-                        <span class="cross ms-2 mt-2 mb-2">+</span>
+                        <button class="btn border-0" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                            <span class="cross ms-2 mt-2 mb-2">+</span>
+                        </button>
+                        <div class="offcanvas offcanvas-end w-50" tabindex="-1" id="offcanvasRight"
+                            aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasRightLabel">Inserisci un nuovo studente</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div class="row g-3">
+                                    <div class="col-12 col-md-6">
+                                        <label for="inputName" class="form-label">Nome</label>
+                                        <input type="text" class="form-control" aria-label="Name" id="inputName">
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label for="inputSurname" class="form-label">Cognome</label>
+                                        <input type="text" class="form-control" aria-label="Last name"
+                                            id="inputSurname">
+                                    </div>
+                                </div>
+                                <form class="row g-3">
+                                    <div class="col-12 col-md-6 ">
+                                        <label for="inputEmail" class="form-label">Email</label>
+
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon1">@</span>
+                                            <input type="email" class="form-control" aria-label="Username"
+                                                aria-describedby="basic-addon1" id="inputEmail">
+                                        </div>
+
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label for="inputPassword4" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="inputPassword4">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="inputAddress" class="form-label">Indirizzo</label>
+                                        <input type="text" class="form-control" id="inputAddress">
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label for="inputCity" class="form-label">Città</label>
+                                        <input type="text" class="form-control" id="inputCity">
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <label for="inputState" class="form-label">Stato</label>
+                                        <select id="inputState" class="form-select">
+                                            <option selected>Scegli..</option>
+                                            <option>Italy</option>
+                                            <option>Germany</option>
+                                            <option>France</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-md-2">
+                                        <label for="inputZip" class="form-label">CAP</label>
+                                        <input type="text" class="form-control" id="inputZip">
+                                    </div> 
+                                    <label for="inputFile" class="form-label">Foto</label>
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text" for="inputGroupSelect01">Scegli file</label>
+                                        <select class="form-select" id="inputGroupSelect01">
+                                          <option selected>Scegli..</option>
+                                          <option value="1"></option>
+                                          <option value="2"></option>
+                                          <option value="3"></option>
+                                        </select>
+                                      </div>
+                                    <div class="col-12">
+                                        <div class="form-check input-group">
+                                            <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              Seleziona per continuare
+                                            </label>
+                                    </div>
+                                    <div class="row text-start mt-3">
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-primary">Salva</button>
+                                            <button type="submit" class="btn btn-danger">Svuota</button>
+                                        </div>
+                                    </div>
+                                   
+                                </form>
+                            </div>
+
+                        </div>
+
                     </div>
 
                 </div>
@@ -137,7 +245,7 @@
                                             <tr>
                                                 <th scope="row">
                                                     <span class="badge rounded-pill code">
-                                                        <i class="fa-solid fa-code fa-2xs" style="color: #ffffff;"></i>
+                                                        <i class="fa-solid fa-code fa-sm" style="color: #ffffff;"></i>
                                                     </span>
                                                     Classe 75
                                                 </th>
@@ -154,7 +262,7 @@
                                             <tr>
                                                 <th scope="row">
                                                     <span class="badge rounded-pill code">
-                                                        <i class="fa-solid fa-code fa-2xs" style="color: #ffffff;"></i>
+                                                        <i class="fa-solid fa-code fa-sm" style="color: #ffffff;"></i>
                                                     </span>
                                                     Classe 76
                                                 </th>
@@ -172,7 +280,7 @@
                                             <tr>
                                                 <th scope="row">
                                                     <span class="badge rounded-pill code">
-                                                        <i class="fa-solid fa-code fa-2xs" style="color: #ffffff;"></i>
+                                                        <i class="fa-solid fa-code fa-sm" style="color: #ffffff;"></i>
                                                     </span>
                                                     Classe 77
                                                 </th>
@@ -192,7 +300,7 @@
                                             <tr>
                                                 <th scope="row">
                                                     <span class="badge rounded-pill code">
-                                                        <i class="fa-solid fa-code fa-2xs" style="color: #ffffff;"></i>
+                                                        <i class="fa-solid fa-code fa-sm" style="color: #ffffff;"></i>
                                                     </span>
                                                     Classe 78
                                                 </th>
@@ -209,7 +317,7 @@
                                             <tr>
                                                 <th scope="row">
                                                     <span class="badge rounded-pill code">
-                                                        <i class="fa-solid fa-code fa-2xs" style="color: #ffffff;"></i>
+                                                        <i class="fa-solid fa-code fa-sm" style="color: #ffffff;"></i>
                                                     </span>
                                                     Classe 79
                                                 </th>
@@ -226,7 +334,7 @@
                                             <tr>
                                                 <th scope="row">
                                                     <span class="badge rounded-pill code">
-                                                        <i class="fa-solid fa-code fa-2xs" style="color: #ffffff;"></i>
+                                                        <i class="fa-solid fa-code fa-sm" style="color: #ffffff;"></i>
                                                     </span>
                                                     Classe 80
                                                 </th>
@@ -243,7 +351,7 @@
                                             <tr>
                                                 <th scope="row">
                                                     <span class="badge rounded-pill code">
-                                                        <i class="fa-solid fa-code fa-2xs" style="color: #ffffff;"></i>
+                                                        <i class="fa-solid fa-code fa-sm" style="color: #ffffff;"></i>
                                                     </span>
                                                     Classe 81
                                                 </th>
@@ -260,7 +368,7 @@
                                             <tr>
                                                 <th scope="row">
                                                     <span class="badge rounded-pill code">
-                                                        <i class="fa-solid fa-code fa-2xs" style="color: #ffffff;"></i>
+                                                        <i class="fa-solid fa-code fa-sm" style="color: #ffffff;"></i>
                                                     </span>
                                                     Classe 82
                                                 </th>
@@ -300,9 +408,12 @@
                                             </h2>
                                             <div id="flush-collapseOne" class="accordion-collapse collapse"
                                                 data-bs-parent="#accordionFlushExample">
-                                                <div class="accordion-body">Placeholder content for this accordion,
-                                                    which is intended to demonstrate the <code>.accordion-flush</code>
-                                                    class. This is the first item's accordion body.</div>
+                                                <div class="accordion-body">
+                                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+                                                    culpa, aut dolor fugit nulla ullam molestiae illum facilis, ducimus
+                                                    maiores quas fugiat nam veniam deleniti quod blanditiis? Maiores,
+                                                    quam illo.
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="accordion-item">
@@ -315,10 +426,12 @@
                                             </h2>
                                             <div id="flush-collapseTwo" class="accordion-collapse collapse"
                                                 data-bs-parent="#accordionFlushExample">
-                                                <div class="accordion-body">Placeholder content for this accordion,
-                                                    which is intended to demonstrate the <code>.accordion-flush</code>
-                                                    class. This is the second item's accordion body. Let's imagine this
-                                                    being filled with some actual content.</div>
+                                                <div class="accordion-body">
+                                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+                                                    culpa, aut dolor fugit nulla ullam molestiae illum facilis, ducimus
+                                                    maiores quas fugiat nam veniam deleniti quod blanditiis? Maiores,
+                                                    quam illo.
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="accordion-item">
@@ -331,12 +444,11 @@
                                             </h2>
                                             <div id="flush-collapseThree" class="accordion-collapse collapse"
                                                 data-bs-parent="#accordionFlushExample">
-                                                <div class="accordion-body">Placeholder content for this accordion,
-                                                    which is intended to demonstrate the <code>.accordion-flush</code>
-                                                    class. This is the third item's accordion body. Nothing more
-                                                    exciting happening here in terms of content, but just filling up the
-                                                    space to make it look, at least at first glance, a bit more
-                                                    representative of how this would look in a real-world application.
+                                                <div class="accordion-body">
+                                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+                                                    culpa, aut dolor fugit nulla ullam molestiae illum facilis, ducimus
+                                                    maiores quas fugiat nam veniam deleniti quod blanditiis? Maiores,
+                                                    quam illo.
                                                 </div>
                                             </div>
                                         </div>
