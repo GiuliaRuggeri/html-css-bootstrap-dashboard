@@ -15,6 +15,7 @@
 
 <body class="w-100">
     <header>
+        <!-- NAVBAR -->
         <nav class="navbar bg-light navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid bg-white flex-nowrap">
                 <a class="navbar-brand" href="#">
@@ -22,10 +23,12 @@
                         alt="mobile logo">
                     <img class="img-fluid d-none d-sm-none d-md-block" src="img/logo.svg" alt="big logo">
                 </a>
-                <form class="d-flex w-100 position-relative align-items-center" role="search">
-                    <input class="form-control bg-light" type="search" placeholder="Prova a cercare"
-                        aria-label="Search">
-                    <!-- <i class="fa-solid fa-magnifying-glass fa-2xs position-absolute me-5" style="color: #000000;"></i> -->
+                <div class="input-group">
+                    <span class="input-group-text searchbar border-0" id="basic-addon1">
+                        <i class="fa-solid fa-magnifying-glass fa-sm" style="color: #000000;"></i>
+                    </span>
+                    <input type="text" class="form-control searchbar border-0" placeholder="Prova a cercare:Lezioni di Laravel" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
                 </form>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
@@ -111,7 +114,7 @@
             <div class="container-fluid">
                 <div class="row bg-primary">
                     <div class="col-12 col-sm-4 col-md-4">
-                        <span class="text-white h1 mt-2">Boolean</span>
+                        <span class="text-white h1 mt-3">Boolean</span>
                         <span class="badge rounded-pill text-bg-light ms-2">Piano blaze</span>
                         <div class="mb-1">
                             <span class="badge rounded-pill text-bg-light">3 app</span>
@@ -124,13 +127,14 @@
                         <p class="h3 text-white">125</p>
 
                     </div>
+                    <!-- OFFCANVAS & FORM -->
                     <div class="col-12 col-sm-4 col-md-4 text-md-center">
                         <span class="text-white h6 mt-2 mb-2">Nuovo studente</span>
                         <button class="btn border-0" type="button" data-bs-toggle="offcanvas"
                             data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                             <span class="cross ms-2 mt-2 mb-2">+</span>
                         </button>
-                        <div class="offcanvas offcanvas-end w-50" tabindex="-1" id="offcanvasRight"
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
                             aria-labelledby="offcanvasRightLabel">
                             <div class="offcanvas-header">
                                 <h5 class="offcanvas-title" id="offcanvasRightLabel">Inserisci un nuovo studente</h5>
@@ -189,7 +193,7 @@
                                     <div class="input-group mb-3">
                                         <label class="input-group-text" for="inputGroupSelect01">Scegli file</label>
                                         <select class="form-select" id="inputGroupSelect01">
-                                          <option selected>Scegli..</option>
+                                          <option selected>Nessun file selezionato</option>
                                           <option value="1"></option>
                                           <option value="2"></option>
                                           <option value="3"></option>
@@ -244,7 +248,7 @@
                                         <tbody>
                                             <tr>
                                                 <th scope="row">
-                                                    <span class="badge rounded-pill code">
+                                                    <span class="circle d-inline-block text-center">
                                                         <i class="fa-solid fa-code fa-sm" style="color: #ffffff;"></i>
                                                     </span>
                                                     Classe 75
@@ -261,7 +265,7 @@
                                             </tr>
                                             <tr>
                                                 <th scope="row">
-                                                    <span class="badge rounded-pill code">
+                                                    <span class="circle d-inline-block text-center">
                                                         <i class="fa-solid fa-code fa-sm" style="color: #ffffff;"></i>
                                                     </span>
                                                     Classe 76
@@ -279,7 +283,7 @@
                                             </tr>
                                             <tr>
                                                 <th scope="row">
-                                                    <span class="badge rounded-pill code">
+                                                    <span class="circle d-inline-block text-center">
                                                         <i class="fa-solid fa-code fa-sm" style="color: #ffffff;"></i>
                                                     </span>
                                                     Classe 77
@@ -299,7 +303,7 @@
                                             <tr>
                                             <tr>
                                                 <th scope="row">
-                                                    <span class="badge rounded-pill code">
+                                                    <span class="circle d-inline-block text-center">
                                                         <i class="fa-solid fa-code fa-sm" style="color: #ffffff;"></i>
                                                     </span>
                                                     Classe 78
@@ -316,7 +320,7 @@
                                             </tr>
                                             <tr>
                                                 <th scope="row">
-                                                    <span class="badge rounded-pill code">
+                                                    <span class="circle d-inline-block text-center">
                                                         <i class="fa-solid fa-code fa-sm" style="color: #ffffff;"></i>
                                                     </span>
                                                     Classe 79
@@ -333,7 +337,7 @@
                                             </tr>
                                             <tr>
                                                 <th scope="row">
-                                                    <span class="badge rounded-pill code">
+                                                    <span class="circle d-inline-block text-center">
                                                         <i class="fa-solid fa-code fa-sm" style="color: #ffffff;"></i>
                                                     </span>
                                                     Classe 80
@@ -350,7 +354,7 @@
                                             </tr>
                                             <tr>
                                                 <th scope="row">
-                                                    <span class="badge rounded-pill code">
+                                                    <span class="circle d-inline-block text-center">
                                                         <i class="fa-solid fa-code fa-sm" style="color: #ffffff;"></i>
                                                     </span>
                                                     Classe 81
@@ -367,7 +371,7 @@
                                             </tr>
                                             <tr>
                                                 <th scope="row">
-                                                    <span class="badge rounded-pill code">
+                                                    <span class="circle d-inline-block text-center">
                                                         <i class="fa-solid fa-code fa-sm" style="color: #ffffff;"></i>
                                                     </span>
                                                     Classe 82

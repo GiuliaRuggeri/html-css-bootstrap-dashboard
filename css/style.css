@@ -51,6 +51,13 @@ main{
     background-color: #f26551;
 }
 
+.circle {
+    width: 1.7rem;
+    height: 1.7rem;
+    background-color: #F26551;
+    border-radius: 50%;
+    line-height: 1.7rem;
+}
 
 .sidebar{
     height: 100%;
@@ -72,4 +79,20 @@ main{
 .sidebutton:hover{
     background-color: rgba(255, 255, 255, 0.558);
     
+}
+
+.searchbar{
+    background-color: #E5E5E5!important;
+}
+@media screen and (max-width: 767px) {
+    
+    .offcanvas {
+        width: 100vw !important;
+    }
+}
+    
+@media screen and (min-width: 768px){
+    .offcanvas{
+        width: 50% !important;
+    }
 }
